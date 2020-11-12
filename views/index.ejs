@@ -1,10 +1,11 @@
-<form id='messageForm'>
+<div id='messageForm'>
     <h2>Name:</h2>
     <input id='name' type='text' />
     <h2>Message:</h2>
     <input id='message' type='text' />
     <br>
-    <button id='submit'>Post</button>
-</form>
+    <button id='submit' onclick='sendMessage()'>Post</button>
+</div>
 <div id='messageContainer'></div>
+<script src="/socket.io/socket.io.js"></script>
 <script src='/js/main.js'></script>

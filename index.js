@@ -15,3 +15,6 @@ app.get('/', homeController.renderIndex);
 var server = app.listen(port, () => {
   console.log(`Sever listening on port ${port}`);
 });
+
+var io = require('socket.io')(server);
+var socketController = require('./controllers/socketController.js')(io);
